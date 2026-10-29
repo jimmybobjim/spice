@@ -1,0 +1,15 @@
+CE amplifier
+VCC vcc 0 12
+VIN in 0 DC 0 AC 1m
+R1 vcc b 47k
+R2 b 0 10k
+RC vcc c 3.3k
+RE e 0 1k
+CE e 0 100u
+CIN in b 10u
+Q1 c b e qn
+.model qn NPN(is=1e-14 bf=200)
+.ac dec 5 10 1meg
+.print ac vdb(c) vp(c)
+.op
+.print op v(b) v(c) v(e) ic(q1)

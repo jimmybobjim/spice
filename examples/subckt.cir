@@ -1,0 +1,12 @@
+Two cascaded divider subcircuits
+.subckt half a b
+R1 a mid 1k
+R2 mid b 1k
+R3 mid 0 1k
+.ends
+V1 in 0 12
+X1 in n1 half
+X2 n1 out half
+RL out 0 1k
+.op
+.print op v(n1) v(out) v(x1.mid) i(x1.r1)

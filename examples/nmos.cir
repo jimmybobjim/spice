@@ -1,0 +1,8 @@
+NMOS common-source (model declared after use)
+VDD vdd 0 5
+VG  g 0 2
+RD  vdd d 10k
+M1  d g 0 0 nm w=20u l=1u
+.model nm NMOS(vto=1 kp=100u lambda=0.02)
+.op
+.print op v(d) id(m1)

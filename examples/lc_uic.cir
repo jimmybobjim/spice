@@ -1,0 +1,6 @@
+LC ring with initial conditions (uic)
+L1 a 0 1m ic=0
+C1 a 0 1u ic=1
+R1 a 0 100k
+.tran 5u 400u uic
+.print tran v(a) i(l1)

@@ -1,0 +1,7 @@
+Zener clamp
+V1 in 0 PWL(0 0 1m 10)
+R1 in out 1k
+D1 0 out zd
+.model zd D(is=1e-14 bv=5.1 ibv=5m)
+.tran 100u 1m
+.print tran v(in) v(out)
